@@ -1,0 +1,101 @@
+:root {
+  --secondary: hsl(0, 36%, 70%);
+  --colortwo: hsl(0, 93%, 68%);
+  --primary: hsl(0, 6%, 24%);
+  --colorfour: Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+  --colorfive: Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow: hidden;
+}
+
+span {
+  font-weight: 300;
+  color: var(--secondary);
+}
+
+h1 {
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 60px;
+  letter-spacing: 10px;
+  line-height: 70px;
+  margin: 0;
+}
+
+p {
+  color: var(--secondary);
+  line-height: 30px;
+  font-size: 16px;
+}
+
+.left {
+  width: 830px;
+  background-image: url(images/bg-pattern-desktop.svg);
+  display: flex;
+  flex-direction: column;
+  padding: 50px 100px 50px 150px;
+}
+.content {
+  width: 443px;
+}
+.input-container {
+  width: 400px;
+  position: relative;
+  margin-top: 40px;
+}
+.input-container input {
+  background: #fff7f8;
+  border: #f0e5e7 1px solid;
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  width: 100%;
+}
+
+input::placeholder {
+  color: #e5d5d6;
+font-weight: 400;
+}
+.input-container button {
+  background-image: url(images/icon-arrow.svg);
+  background-size: 12px 20px;
+  background-color: #f5b6b5;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+
+  border-radius: 50%;
+  height: 80%;
+  aspect-ratio: 1;
+
+  position: absolute;
+  right: 0;
+  transform: translateX(150%);
+  top: 10%;
+}
+
+.logo {
+  margin-bottom: 80px;
+}
+
+img {
+  background-size: cover;
+}
+
+
+@media (max-width: 755px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+}
